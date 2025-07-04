@@ -194,7 +194,7 @@ Ana
 
 **Resultado**: IMPRODUTIVO (Confiança: 9/10)
 
-## 🔍 Métricas e Monitoramento
+## Métricas e Monitoramento
 
 ### Endpoint de Saúde
 ```
@@ -245,17 +245,6 @@ Este projeto está sob licença MIT. Veja o arquivo `LICENSE` para mais detalhes
 - **Groq** pela API gratuita de alta qualidade
 - **Render** pela plataforma de deploy gratuita
 - **Comunidade Open Source** pelas bibliotecas utilizadas
-
----
-
-### Desafio AutoU - Requisitos Atendidos
-
-✅ **Funcionalidade**: Classificação e resposta automática  
-✅ **Qualidade Técnica**: Código limpo e documentado  
-✅ **Uso de AI**: Integração eficaz com Groq API  
-✅ **Hospedagem**: Deploy funcional no Render  
-✅ **Interface Web**: HTML responsivo e intuitivo  
-✅ **Autonomia**: Solução completa e independente  
 
 ---
 

@@ -74,6 +74,8 @@ pip install -r requirements.txt
 # Crie arquivo .env
 GROQ_API_KEY=sua_chave_groq_aqui
 SECRET_KEY=sua_chave_secreta_aqui
+FLASK_ENV=development
+APP_URL=http://localhost:5000
 ```
 
 5. **Execute a aplicação**

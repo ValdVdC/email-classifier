@@ -248,4 +248,4 @@ Este projeto está sob licença MIT. Veja o arquivo `LICENSE` para mais detalhes
 
 ---
 
-*Desenvolvido por Osvaldo Vasconcelos para o Case Prático AutoU*
+*Desenvolvido por Osvaldo Vasconcelos de Carvalho para o Case Prático AutoU*

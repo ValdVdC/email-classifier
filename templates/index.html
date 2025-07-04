@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Emails - AutoU - Osvaldo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="themeToggle" class="theme-btn" onclick="toggleTheme()">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+            <h1>Classificador de Emails</h1>
+            <p>Solução Inteligente para Análise e Resposta Automática de Emails</p>
+        </div>
+        
+        <div class="content">
+            <!-- Upload de Arquivo -->
+            <div class="upload-section">
+                <h2>📎 Upload de Arquivo</h2>
+                <div class="upload-area" id="uploadArea">
+                    <p style="font-size: 1.2rem; margin-bottom: 10px;">Arraste e solte seu arquivo aqui ou clique para selecionar</p>
+                    <p style="color: #666; font-size: 0.9rem;">Formatos suportados: .txt, .pdf (máx. 16MB)</p>
+                    <input type="file" id="fileInput" class="file-input" accept=".txt,.pdf">
+                    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                        📁 Selecionar Arquivo
+                    </button>
+                </div>
+                
+                <div class="file-preview" id="filePreview">
+                    <div class="file-info">
+                        <div class="file-details">
+                            <span class="file-icon" id="fileIcon">📄</span>
+                            <div>
+                                <div class="file-name" id="fileName">arquivo.txt</div>
+                                <div class="file-size" id="fileSize">0 KB</div>
+                            </div>
+                        </div>
+                        <button class="remove-file" onclick="removeFile()">❌ Remover</button>
+                    </div>
+                    <button class="confirm-upload" onclick="confirmUpload()">
+                        ✅ Confirmar e Processar Arquivo
+                    </button>
+                </div>
+            </div>
+            
+            <div class="divider">OU</div>
+            
+            <!-- Entrada de Texto -->
+            <div class="text-input-section" id="textInputSection">
+                <h2>Inserir Texto do Email</h2>
+                <textarea 
+                    id="emailText" 
+                    class="text-input" 
+                    placeholder="Cole aqui o conteúdo do email para análise..."></textarea>
+                <div class="button-container">
+                    <button class="process-btn" onclick="processText()">
+                        Processar Email
+                    </button>
+                    <button class="clear-btn" id="clearBtn" onclick="clearResults()" style="display: none;">
+                        🗑️ Limpar Resultados
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Loading -->
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="loading-modal">
+                    <div class="spinner"></div>
+                    <p>Processando email... Por favor, aguarde.</p>
+                    <button class="cancel-btn" onclick="cancelProcessing()">
+                        ❌ Cancelar
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mensagem de Erro -->
+            <div class="error-message" id="errorMessage"></div>
+            
+            <!-- Resultados -->
+            <div class="results" id="results">
+                <h2>📊 Resultados da Análise</h2>
+                
+                <div class="classification-result">
+                    <h3>Classificação</h3>
+                    <div id="classificationBadge" class="classification-badge"></div>
+                    <p id="classificationDetails" style="line-height: 1.6;"></p>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" id="confidenceFill"></div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 1rem; color: #555;">
+                        <strong>Nível de Confiança:</strong> <span id="confidenceText">0</span>/10
+                    </p>
+                </div>
+                
+                <div class="response-section">
+                    <h3>💬 Resposta Automática Sugerida</h3>
+                    <div class="suggested-response" id="suggestedResponse"></div>
+                    <button class="copy-btn" onclick="copyResponse()">📋 Copiar Resposta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

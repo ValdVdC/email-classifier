@@ -194,7 +194,7 @@ Ana
 
 **Resultado**: IMPRODUTIVO (Confiança: 9/10)
 
-## 🔍 Métricas e Monitoramento
+## Métricas e Monitoramento
 
 ### Endpoint de Saúde
 ```
@@ -248,15 +248,4 @@ Este projeto está sob licença MIT. Veja o arquivo `LICENSE` para mais detalhes
 
 ---
 
-### Desafio AutoU - Requisitos Atendidos
-
-✅ **Funcionalidade**: Classificação e resposta automática  
-✅ **Qualidade Técnica**: Código limpo e documentado  
-✅ **Uso de AI**: Integração eficaz com Groq API  
-✅ **Hospedagem**: Deploy funcional no Render  
-✅ **Interface Web**: HTML responsivo e intuitivo  
-✅ **Autonomia**: Solução completa e independente  
-
----
-
-*Desenvolvido por Osvaldo Vasconcelos para o Case Prático AutoU*
+*Desenvolvido por Osvaldo Vasconcelos de Carvalho para o Case Prático AutoU*
